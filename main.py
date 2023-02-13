@@ -1,11 +1,13 @@
 import requests
-import passwords
+import os
+from dotenv import load_dotenv
 from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
+load_dotenv()
 
 URL = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch"
 
@@ -16,6 +18,8 @@ Bootstrap(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///recipes.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
+API = os.getenv('API_KEY')
 
 with app.app_context():
     class Recipe(db.Model):
@@ -38,7 +42,7 @@ class FindRecipeForm(FlaskForm):
 
 
 headers = {
-    "X-RapidAPI-Key": f"{passwords.api_key}",
+    "X-RapidAPI-Key": API,
     "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
 }
 
