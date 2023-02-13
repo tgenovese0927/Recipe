@@ -19,7 +19,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///recipes.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-API = os.getenv('API_KEY')
+API = os.environ.get('API_KEY')
 
 with app.app_context():
     class Recipe(db.Model):
