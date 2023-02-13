@@ -1,0 +1,84 @@
+h1 {
+  font-weight: 800;
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 100px;
+}
+
+header.masthead {
+  margin-bottom: 50px;
+  background: no-repeat center center;
+  background-color: #868e96;
+  background-attachment: scroll;
+  position: relative;
+  background-size: cover;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #212529;
+  opacity: 0.5;
+}
+
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
+  padding: 200px 0 150px;
+  color: #FFFFFF;
+  text-align: center
+}
+
+header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin: 10px 0 0;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.content {
+  font-size: 20px;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.recipe_container {
+  width: 50%;
+  margin: 100px auto;
+  text-align: left;
+  line-height: 2
+
+}
+
+.h3_index {
+  font-weight: 800;
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 75px;
+  text-align: center;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.recipe-image {
+  width: 25%;
+  float:left;
+  margin-right: 30px;
+}
+
+.space {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
